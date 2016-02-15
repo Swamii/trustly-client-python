@@ -260,7 +260,7 @@ class SignedAPI(trustly.api.api.API):
             failurl=None, templateurl=None, urltarget=None,
             mobilephone=None, firstname=None, lastname=None,
             holdnotifications=None, email=None, dateofbirth=None,
-            requestdirectdebitmandate=None):
+            requestdirectdebitmandate=None, urlscheme=None):
 
         attributes = dict(
                 Locale=locale,
@@ -269,12 +269,13 @@ class SignedAPI(trustly.api.api.API):
                 SuccessURL=successurl,
                 FailURL=failurl,
                 TemplateURL=templateurl,
+                URLScheme=urlscheme,
                 URLTarget=urltarget,
                 MobilePhone=mobilephone,
                 Firstname=firstname,
                 Lastname=lastname,
                 Email=email,
-                DateOfBirth=dateofbirth
+                DateOfBirth=dateofbirth,
                 )
 
         if holdnotifications:
@@ -353,7 +354,7 @@ class SignedAPI(trustly.api.api.API):
             nationalidentificationnumber=None, shopperstatement=None,
             suggestedminamount=None, suggestedmaxamount=None,
             integrationmodule=None, holdnotifications=None,
-            authorizeonly=None, templatedata=None):
+            authorizeonly=None, templatedata=None, urlscheme=None):
 
         attributes = dict(
                 AuthorizeOnly=self.api_bool(authorizeonly),
@@ -366,6 +367,7 @@ class SignedAPI(trustly.api.api.API):
                 SuccessURL=successurl,
                 FailURL=failurl,
                 TemplateURL=templateurl,
+                URLScheme=urlscheme,
                 URLTarget=urltarget,
                 MobilePhone=mobilephone,
                 Firstname=firstname,
